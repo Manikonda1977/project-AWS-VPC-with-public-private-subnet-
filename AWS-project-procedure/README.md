@@ -4,17 +4,17 @@
 
 ## Description
 
-###  - This project demonstrates how to create a VPC that can be used for server in a production environment 
-###  - To improve resiliency, Deployed the server in two availability Zones, by using an Auto Scaling group and an Application Load Balancer. 
-###  - For additional security, deployed the server in private subnet. 
-###  - The servers receive request through the load balancer. The server can connect o the internet by using a NAT gateway. To improve resiliency, deployed the gateway in both Availability Zones.
+####  - This project demonstrates how to create a VPC that can be used for server in a production environment 
+####  - To improve resiliency, Deployed the server in two availability Zones, by using an Auto Scaling group and an Application Load Balancer. 
+#### - For additional security, deployed the server in private subnet. 
+####  - The servers receive request through the load balancer. The server can connect o the internet by using a NAT gateway. To improve resiliency, deployed the gateway in both Availability Zones.
 
 ## Overview
 
-### - The VPC has public subnets and private subnets in two Availability Zones.
-### - Each public subnet contains a NAT gateway and a load balancer node.
-### - The servers run in the private subnets, are launched and terminated by using an Auto Scaling group, and receive traffic from the Load Balancer.
-### - The servers can connect to the internet by using the NAT gateway. 
+#### - The VPC has public subnets and private subnets in two Availability Zones.
+#### - Each public subnet contains a NAT gateway and a load balancer node.
+#### - The servers run in the private subnets, are launched and terminated by using an Auto Scaling group, and receive traffic from the Load Balancer.
+#### - The servers can connect to the internet by using the NAT gateway. 
 
 
 
