@@ -26,7 +26,7 @@
 -	Number of Availability Zones - 2 (for High Availability)
 -	Number of Public Subnet - 2
 -	Number of Private Subnet - 2
--	Number of NAT Gate - 1 per AZ 
+-	Number of NAT Gate - 1 per AZ (For masking of application IP addresses)
 -	VPC  endpoints  -  None (As Database is not required – 2 Tier Application)
 
 ![Screenshot (248)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f57da3d5-39ad-444c-82ab-d2a1bbbb4892)
@@ -34,6 +34,7 @@
 ![Screenshot (252)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e44671a8-7eab-4903-a453-a8ceeb895d8d)
 
 ## Hit Create VPC And wait for this Outcome 
+
 ![Screenshot (253)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/cb2fecd0-859d-40b2-bbf6-127de740abe8)
 ![Screenshot (254)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/92ddedb9-e2be-4647-860e-d55c0d4f09a7)
 ![Screenshot (255)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/bb15e395-33b7-4256-993b-12d1c0e14281)
