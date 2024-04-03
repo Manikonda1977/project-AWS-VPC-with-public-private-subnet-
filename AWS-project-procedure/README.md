@@ -19,6 +19,16 @@
 
 
 ![1](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/a3b48941-a7d4-4536-927b-e53e9be642cf)
+## Lets start with creating a VPC (Virtual Private Cloud).
+### Required Configuration for VPC 
+-	Select option - VPC and more 
+-	Name the VPC 
+-	Number of Availability Zones - 2 (for High Availability)
+-	Number of Public Subnet - 2
+-	Number of Private Subnet - 2
+-	Number of NAT Gate - 1 per AZ 
+-	VPC  endpoints  -  None (As Database is not required – 2 Tier Application)
+
 ![Screenshot (248)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f57da3d5-39ad-444c-82ab-d2a1bbbb4892)
 ![Screenshot (251)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/0a143e7c-832a-4205-a2e2-fa5a0a6730df)
 ![Screenshot (252)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e44671a8-7eab-4903-a453-a8ceeb895d8d)
