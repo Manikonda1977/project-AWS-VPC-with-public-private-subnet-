@@ -1,4 +1,4 @@
-
+![1](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/a3b48941-a7d4-4536-927b-e53e9be642cf)
 ![Screenshot (248)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f57da3d5-39ad-444c-82ab-d2a1bbbb4892)
 ![Screenshot (251)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/0a143e7c-832a-4205-a2e2-fa5a0a6730df)
 ![Screenshot (252)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e44671a8-7eab-4903-a453-a8ceeb895d8d)
