@@ -32,6 +32,8 @@
 ![Screenshot (248)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f57da3d5-39ad-444c-82ab-d2a1bbbb4892)
 ![Screenshot (251)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/0a143e7c-832a-4205-a2e2-fa5a0a6730df)
 ![Screenshot (252)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e44671a8-7eab-4903-a453-a8ceeb895d8d)
+
+## Hit Create VPC And wait for this Outcome 
 ![Screenshot (253)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/cb2fecd0-859d-40b2-bbf6-127de740abe8)
 ![Screenshot (254)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/92ddedb9-e2be-4647-860e-d55c0d4f09a7)
 ![Screenshot (255)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/bb15e395-33b7-4256-993b-12d1c0e14281)
