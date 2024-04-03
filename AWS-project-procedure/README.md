@@ -1,6 +1,6 @@
 # VPC with public-private subnet in production 
 ## Services used 
-### -VPC, EC2,Automatic Scaling Group,Launch Templates, Security Group,Linux, Load Balancer.
+### -VPC, EC2, Automatic Scaling Group, Launch Templates, Security Group, Linux, Load Balancer.
 
 ## Description
 
