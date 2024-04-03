@@ -2,7 +2,7 @@
 ## Services used 
 ### -VPC, EC2,Automatic Scaling Group,Launch Templates, Security Group,Linux, Load Balancer.
 
-### Description
+## Description
 
 ###  - This project demonstrates how to create a VPC that can be used for server in a production environment 
 ###  - To improve resiliency, Deployed the server in two availability Zones, by using an Auto Scaling group and an Application Load Balancer. 
