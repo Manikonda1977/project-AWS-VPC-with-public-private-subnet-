@@ -115,7 +115,7 @@ Step 6
   
 Step 7 
 -	Review all the configurations of tha Auto Scaling Group 
--	Hit next
+-	Hit Create Auto Scaling Group 
 
 
 
