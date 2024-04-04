@@ -91,12 +91,33 @@ Step 2 –
 Step 3 – 
 -	I have not attached any load balancer at Auto Scaling Group private subnet for applications
 -	Health check is Okay
--	Hit next 
+-	Hit next
+  
+Step 4
+-	Desired capacity – 2
+-	Minimum capacity – 1
+-	Maximum capacity – 4 (if traffic increases for applications it can expand up to 4 machines)
+-	Scaling policies – None 
+-	Hit next
 
 ![Screenshot (265)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e7dc45ba-190c-4bc7-bb52-3adcdcfb43d8)
 ![Screenshot (266)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/202310b6-7968-4e64-a563-98def333da31)
+
+Step 5 
+-	Here we can use SNS for notification about machine if added or terminated (I have not used SNS in this project)
+-	Hit next 
+
 ![Screenshot (267)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/c7774005-f678-4479-bb30-7e8221e6e376)
+
+Step 6 
+-	Here we can use tags for using this Auto Scaling Group in future (I am using tags in this project )
+
 ![Screenshot (268)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d3f5cd1c-da8a-4c4e-ab09-ca84e46c474e)
+
+Step 7 
+-	Review all the configurations of tha Auto Scaling Group 
+-	Hit next
+
 ![Screenshot (269)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/b4acb153-4524-4e1d-a23a-4eedb3fb0274)
 ![Screenshot (270)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/8dd31bd7-1656-40c0-a894-20bb15b27f67)
 ![Screenshot (272)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1f6b847f-3d4e-4f70-9964-28173af3915c)
