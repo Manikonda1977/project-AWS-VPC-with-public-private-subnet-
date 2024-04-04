@@ -37,6 +37,12 @@
 
 ![Screenshot (253)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/cb2fecd0-859d-40b2-bbf6-127de740abe8)
 ![Screenshot (254)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/92ddedb9-e2be-4647-860e-d55c0d4f09a7)
+
+## Now we will Create Auto Scaling Group and for creating Auto Scaling Group we need to create Launch template as Launch template is used as reference for creation of instances in future during downtime 
+-	Search for EC2 
+-	Search for Auto Scaling Group
+-	Click on Create Launch Template
+
 ![Screenshot (255)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/bb15e395-33b7-4256-993b-12d1c0e14281)
 ![Screenshot (256)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/37b8c231-6103-4cbb-b653-55496ea542c4)
 ![Screenshot (257)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/bb5190e8-1c3f-4f2d-8e63-dbeb114967c7)
