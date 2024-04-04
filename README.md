@@ -44,15 +44,55 @@
 -	Click on Create Launch Template
 
 ![Screenshot (255)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/bb15e395-33b7-4256-993b-12d1c0e14281)
+
+-	Name the Template
+-	Provide Description
+
 ![Screenshot (256)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/37b8c231-6103-4cbb-b653-55496ea542c4)
+
+-	Choose Operating System as Ubuntu (For Linux based applications)
+  
 ![Screenshot (257)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/bb5190e8-1c3f-4f2d-8e63-dbeb114967c7)
+
+-	Choose Instance Type (As per Requirements) I am using t2 micro (free tier applicable)
+-	Key Pair (For Login Authentication)
+
 ![Screenshot (258)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1959d61e-91f6-4d8e-b9b0-b1128334129e)
+
+-	Click Network Settings (For Creating Security Group with Inbound Rules)
+       -   Select create security group
+       -   Name the security group
+       -   Provide description
+       -   select VPC ( select VPC just created  )
+       -   security rule 1 = Type ssh, Port 22, Source Type  anywhere  (for SSH login)
+       -   security rule 2 = Type Custom TCP, Port 8000, Source Type  anywhere  
+- Hit Create
 ![Screenshot (259)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/3df33470-cbf1-486e-b4bf-519016473fe4)
 ![Screenshot (260)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/c2063573-e280-4555-9321-0f96ca46e2c8)
+
+### After creation of Launch Template we will create Auto Scaling Group
+Step 1 -
+-	Name the auto scaling group 
+-	Select the launch template we have just created
+-	Hit next 
+
+
 ![Screenshot (261)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/a35cfd72-487d-4977-a306-c1476b37fd2e)
 ![Screenshot (262)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/97779458-7ad8-4e6a-a347-0110ac2194bd)
+
+Step 2 – 
+-	Choose VPC last created
+-	Choose the private subnet of both the AZ ( As application needs to be in private )
+-	Hit next
+
 ![Screenshot (263)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/66f1d8ce-8cd4-4e1e-b2b8-2add32e01372)
 ![Screenshot (264)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/7b075ca4-7e83-4a8d-85ac-4eaca3751083)
+
+Step 3 – 
+-	I have not attached any load balancer at Auto Scaling Group private subnet for applications
+-	Health check is Okay
+-	Hit next 
+
 ![Screenshot (265)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e7dc45ba-190c-4bc7-bb52-3adcdcfb43d8)
 ![Screenshot (266)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/202310b6-7968-4e64-a563-98def333da31)
 ![Screenshot (267)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/c7774005-f678-4479-bb30-7e8221e6e376)
