@@ -111,12 +111,16 @@ Step 5
 
 Step 6 
 -	Here we can use tags for using this Auto Scaling Group in future (I am using tags in this project )
-
-![Screenshot (268)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d3f5cd1c-da8a-4c4e-ab09-ca84e46c474e)
-
+-	Hit next
+  
 Step 7 
 -	Review all the configurations of tha Auto Scaling Group 
 -	Hit next
+
+
+
+![Screenshot (268)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d3f5cd1c-da8a-4c4e-ab09-ca84e46c474e)
+
 
 ![Screenshot (269)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/b4acb153-4524-4e1d-a23a-4eedb3fb0274)
 ![Screenshot (270)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/8dd31bd7-1656-40c0-a894-20bb15b27f67)
