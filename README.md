@@ -144,43 +144,40 @@ For creating Bastion Host, we will Create an EC2 instance
 
 ![Screenshot (272)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1f6b847f-3d4e-4f70-9964-28173af3915c)
 
-Now  Copy the key pair (pem file) from local computer to the bastion server using the SCP command
--	scp -i /path/key-pair-name.pem /home/ubuntu/key.pem ubuntu@PRIVATE IP ADDRESH:/home/ubuntu
+## Copy the key pair (pem file) from local computer to the bastion server using the SCP command
+-	scp -i /path/key-pair-name.pem /home/ubuntu/key.pem ubuntu@IP ADDRESH:/home/ubuntu
 
 ![Screenshot (273)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/9bf0a21a-ed7e-4f4c-9f58-a679af558731)
 
-Now connect to the Bastion Host through ubuntu terminal using SSH command 
+## Connect to the Bastion Host through ubuntu terminal using SSH command 
 -	ssh -i /path/key-pair-name.pem instance-user-name@instance-public-ip-address
-
-
-![Screenshot (274)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/0f5e4083-0ddb-40cf-a588-ce8a224e648e)
 
 After establishing the connection with Bastion Host, we will connect to the private application server  
 Check if the pem file is present or not by using ( ls )command
 
 ![Screenshot (275)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/6520dbf3-0f89-415a-8c3f-a1a22581921f)
 
-Now connect to the private application server  through Bastion Host using SSH command 
+## Connect to the private application server  through Bastion Host using SSH command 
 -	ssh -i /path/key-pair-name.pem instance-user-name@instance-private-ip-address
 
 ![Screenshot (276)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1003de8f-89db-4391-834b-362c548530d5)
 
-Now  install the application 
+ ## Install the application 
 -	Make a simple vim file  ( vim index.html )and  write this simple html code 
-<! DOCTYPE html>
-<html>
-<body>
-<h1>
- My First AWS PROJECT to demonstrate apps in private subnet 
-</h1>
-</body>
-</html>
+<! DOCTYPE html> 
+
+ 
+ #### My AWS PROJECT to demonstrate apps in private subnet 
+
+
+
 -	then run the python command at port 8000
-    –      python3 -m http.server 8000
+
+- python3 -m http.server 8000
 
 ![Screenshot (277)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/5f893d83-fa23-4dc9-9a3a-3b52767bbcb5)
 
-Now Create Application Load Balancer which works with HTTP & HTTTPS - ( Level 7 Load Balancer )
+## Create Application Load Balancer which works with HTTP & HTTTPS - ( Level 7 Load Balancer )
 - Select application load balancer
 
 ![Screenshot (278)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/22a9b952-8df0-46bc-be94-870fc29bc12f)
@@ -191,22 +188,56 @@ Now Create Application Load Balancer which works with HTTP & HTTTPS - ( Level 7 
 
 ![Screenshot (279)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/09c8e48c-ccf7-4641-8c31-301d50d7657e)
 
--  Select IPV4
 - Select VPC which is created above 
 - Select both the Availability Zones only with public subnet
 - Select Security Group with Port 80 from anywhere
 
 ![Screenshot (281)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/80fc9291-6466-405b-bf94-f6274200ca78)
 
-![Screenshot (282)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/94cda414-68bd-43f9-b5eb-521cc069b0ff)
+## For Load Balancer - Create target Group 
+-	Select instance 
+
 ![Screenshot (283)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d62f20ab-4dfd-44b7-a5a6-3cee73f478e2)
+
+-	Name the target group 
+
 ![Screenshot (284)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f2333213-06ba-408e-bdc3-e6bcf205fa1b)
+
+-	Select HTTP port 8000
+-	Hit next
+  
 ![Screenshot (285)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/e9a71939-454c-49a4-b742-fe04081e854e)
+
+### Select the instance as target for load balancer that were created above by Auto Scaling Group
+
 ![Screenshot (287)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d6c8cea0-baa4-4f12-9ccd-b6c2f121c14c)
+
+Port for selected instance – 8000
+Click – Include as pending below
+-	Hit Create Target Group 
+
 ![Screenshot (288)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/5cda846b-802d-4bc5-a99b-2a5e9a331c5d)
+
+### After creation of the target group 
+Add this target group to the Load Balancer 
+-	Select protocol – HTTP 
+-	Open port – 80
+-	Select Default action – VPC created above 
+
 ![Screenshot (289)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f3327e7d-7ca2-4526-8b33-e418619de56d)
+
+Hit create Load Balancer 
+
 ![Screenshot (290)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/2e5f3992-e906-4629-9bd2-aa8e4e7016f1)
+
+Now Go to the Load Balancer – If its showing error for port 80 then change the security group and allow HTTP ,TCP,80,Anywhere
+
 ![Screenshot (291)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/9727d8dc-e514-422c-a561-370f92025fcc)
 ![Screenshot (292)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/17cf24c4-483d-4fe8-a794-594034d9f382)
+
+## Now Copy the DNS name link and paste on your Browser to Look your HTML page
 ![Screenshot (293)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1953a5ce-1776-4cb2-ad8f-cca7233d404c)
+
+## My AWS PROJECT to demonstrate apps in private subnet 
+
 ![Screenshot (294)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/ba52f72a-0380-4cbb-bd3d-c7faf6d1d11c)
