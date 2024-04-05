@@ -82,10 +82,12 @@ Step 1 -
 
 Step 2 – 
 -	Choose VPC last created
+
+![Screenshot (263)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/66f1d8ce-8cd4-4e1e-b2b8-2add32e01372)
+
 -	Choose the private subnet of both the AZ ( As application needs to be in private )
 -	Hit next
 
-![Screenshot (263)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/66f1d8ce-8cd4-4e1e-b2b8-2add32e01372)
 ![Screenshot (264)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/7b075ca4-7e83-4a8d-85ac-4eaca3751083)
 
 Step 3 – 
@@ -116,7 +118,6 @@ Step 6
 Step 7 
 -	Review all the configurations of tha Auto Scaling Group 
 -	Hit Create Auto Scaling Group 
-
 
 
 ![Screenshot (268)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d3f5cd1c-da8a-4c4e-ab09-ca84e46c474e)
