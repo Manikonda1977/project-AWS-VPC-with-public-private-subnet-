@@ -122,18 +122,82 @@ Step 7
 
 ![Screenshot (268)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d3f5cd1c-da8a-4c4e-ab09-ca84e46c474e)
 
+## Now  check EC2 instance if Auto Scaling Group have created 2  instances in the selected subnet at step 2 of Auto Scaling Group Creation
+After checking the subnets, we will install the applications  in both the private instances 
+## Bastion Host
+For installing applications, we need to connect the private application server. To connect the private server, we need to create Bastion Host ( As public IP is not present to SSH the private application server ) 
+For creating Bastion Host, we will Create an EC2 instance 
+-	Name instance Bastion Host
+-	Select the image ubuntu (For Linux based applications )
 
 ![Screenshot (269)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/b4acb153-4524-4e1d-a23a-4eedb3fb0274)
+
+-	Instance type – t2 micro
+-	Select Key pair to ssh connect the Bastion Host
+
 ![Screenshot (270)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/8dd31bd7-1656-40c0-a894-20bb15b27f67)
+
+-	Network setting - select the same VPC as created above 
+-	Add security group which allow SSH connect to Bastion Host 
+-	Enable assign public IP
+-	Hit Launch Instance 
+
 ![Screenshot (272)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1f6b847f-3d4e-4f70-9964-28173af3915c)
+
+Now  Copy the key pair (pem file) from local computer to the bastion server using the SCP command
+-	scp -i /path/key-pair-name.pem /home/ubuntu/key.pem ubuntu@PRIVATE IP ADDRESH:/home/ubuntu
+
 ![Screenshot (273)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/9bf0a21a-ed7e-4f4c-9f58-a679af558731)
+
+Now connect to the Bastion Host through ubuntu terminal using SSH command 
+-	ssh -i /path/key-pair-name.pem instance-user-name@instance-public-ip-address
+
+
 ![Screenshot (274)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/0f5e4083-0ddb-40cf-a588-ce8a224e648e)
+
+After establishing the connection with Bastion Host, we will connect to the private application server  
+Check if the pem file is present or not by using ( ls )command
+
 ![Screenshot (275)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/6520dbf3-0f89-415a-8c3f-a1a22581921f)
+
+Now connect to the private application server  through Bastion Host using SSH command 
+-	ssh -i /path/key-pair-name.pem instance-user-name@instance-private-ip-address
+
 ![Screenshot (276)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/1003de8f-89db-4391-834b-362c548530d5)
+
+Now  install the application 
+-	Make a simple vim file  ( vim index.html )and  write this simple html code 
+<! DOCTYPE html>
+<html>
+<body>
+<h1>
+ My First AWS PROJECT to demonstrate apps in private subnet 
+</h1>
+</body>
+</html>
+-	then run the python command at port 8000
+    –      python3 -m http.server 8000
+
 ![Screenshot (277)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/5f893d83-fa23-4dc9-9a3a-3b52767bbcb5)
+
+Now Create Application Load Balancer which works with HTTP & HTTTPS - ( Level 7 Load Balancer )
+- Select application load balancer
+
 ![Screenshot (278)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/22a9b952-8df0-46bc-be94-870fc29bc12f)
+
+- Name the load balancer 
+-  Select – Internet facing 
+-  Select IPV4
+
 ![Screenshot (279)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/09c8e48c-ccf7-4641-8c31-301d50d7657e)
+
+-  Select IPV4
+- Select VPC which is created above 
+- Select both the Availability Zones only with public subnet
+- Select Security Group with Port 80 from anywhere
+
 ![Screenshot (281)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/80fc9291-6466-405b-bf94-f6274200ca78)
+
 ![Screenshot (282)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/94cda414-68bd-43f9-b5eb-521cc069b0ff)
 ![Screenshot (283)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/d62f20ab-4dfd-44b7-a5a6-3cee73f478e2)
 ![Screenshot (284)](https://github.com/TheMannu/project-AWS-VPC-with-public-private-subnet-/assets/84488161/f2333213-06ba-408e-bdc3-e6bcf205fa1b)
